@@ -202,7 +202,8 @@ yt-dlp dvr treats this as an expected upcoming-stream state.
 
 It continues checking until the actual media stream becomes available.
 
-Automatic Recording
+
+# Automatic Recording
 
 When a monitored channel becomes live, yt-dlp dvr:
 
@@ -260,7 +261,9 @@ If FFmpeg is installed separately, enter its path in Settings.
 Example:
 
 C:/ffmpeg/bin/ffmpeg.exe
-MP4 Remuxing
+
+
+# MP4 Remuxing
 
 Enable:
 
@@ -274,7 +277,9 @@ if you want the final recording stored as an MP4 whenever possible.
 
 Remuxing normally does not require completely re-encoding the original video, so it is much faster than generating a burned-in chat overlay.
 
-YouTube Cookies
+
+
+# YouTube Cookies
 
 Some YouTube videos require authentication.
 
@@ -296,7 +301,9 @@ A typical yt-dlp parameter configuration may contain:
 {
   "cookiefile": "C:/Users/YourName/Videos/yt-dlp-dvr/youtube.com_cookies.txt"
 }
-Security Warning
+
+
+# Security Warning
 
 Your cookie file may contain active YouTube login credentials.
 
@@ -348,7 +355,9 @@ A configuration may contain custom yt-dlp dvr options such as:
 
 These _ytdvr_* options are internal yt-dlp dvr controls and are not passed directly to yt-dlp as unknown options.
 
-Bot Challenge Backoff
+
+
+# Bot Challenge Backoff
 
 If YouTube starts returning repeated bot/authentication challenges, yt-dlp dvr can temporarily reduce request frequency.
 
@@ -358,7 +367,9 @@ For example:
 
 prevents the application from hammering the endpoint repeatedly.
 
-Live Chat Recording
+
+
+# Live Chat Recording
 
 Enable:
 
@@ -386,7 +397,9 @@ Each line contains structured information for an individual chat event.
 
 The JSONL file is used by the enhanced chat renderer.
 
-Empty Chat Files
+
+
+# Empty Chat Files
 
 A chat file may initially appear as:
 
@@ -396,7 +409,9 @@ This does not necessarily mean the chat recorder is broken.
 
 If nobody has sent a chat message yet, there may simply be nothing to write.
 
-Chat Post-Processing
+
+
+# Chat Post-Processing
 
 yt-dlp dvr can create additional videos after the livestream finishes.
 
@@ -463,7 +478,9 @@ the resulting file can be large
 
 This is normal for video encoding.
 
-CPU Usage Modes
+
+
+# CPU Usage Modes
 
 yt-dlp dvr includes CPU limiting options for enhanced chat rendering.
 
@@ -491,7 +508,7 @@ Advantages:
 
 noticeably lower CPU load
 reasonable rendering speed
-better for laptops and smaller PCs
+better for laptops and smaller PC's
 Balanced
 up to 4 CPU threads
 
@@ -549,7 +566,9 @@ video.chat-overlay.mp4
 
 Do not upload or use the .tmp.mp4 file unless you specifically want to inspect an interrupted render.
 
-Recovering Missing Chat Overlays
+
+
+# Recovering Missing Chat Overlays
 
 If the livestream was recorded successfully but the enhanced chat overlay was not created, use:
 
@@ -568,7 +587,9 @@ the recording filesystem
 
 This allows old recordings to be repaired even if their original database entry is unavailable.
 
-Example Recovery
+
+
+# Example Recovery
 
 Suppose you already have:
 
