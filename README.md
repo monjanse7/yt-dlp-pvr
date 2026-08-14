@@ -94,7 +94,8 @@ database conflicts
 FFmpeg conflicts
 duplicate chat recorders
 file locking problems
-Web Interface
+
+# Web Interface
 
 yt-dlp dvr includes a local web interface.
 
